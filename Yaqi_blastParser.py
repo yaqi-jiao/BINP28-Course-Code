@@ -46,7 +46,7 @@ def parser(blast_file):
         # determine query line
         if line.startswith("Query="):
             current_query = line.split()[1]
-
+        
         if ("No hits found") in line:
             results.append((
                     current_query, "", "", "", ""
@@ -58,7 +58,7 @@ def parser(blast_file):
         
         if "Score" in line and "Expect" in line:
             score_match = re.search(r"Score =\s+([\d\.]+)", line)
-            evalue_match = re.search(r"Expect =\s+(\S+)", line)
+            evalue_match = re.search(r"Expect =\s*([^\s,]+)", line)
 
             if score_match and evalue_match:
                 current_score = score_match.group(1)
@@ -66,6 +66,7 @@ def parser(blast_file):
         
         if "Identities" in line:
             identity_match = re.search(r"Identities = \d+/\d+ \((\d+)%\)", line)
+            # only consider hits with scores and identities
             if identity_match and current_query and current_target and current_score:
                 current_identity = identity_match.group(1)
                 
@@ -77,7 +78,7 @@ def parser(blast_file):
                     current_score
                 ))
 
-            # next hit
+            # prepare for next hit
             current_target = None
             current_score = None
             current_evalue = None
