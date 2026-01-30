@@ -6,11 +6,13 @@ It currently contains scripts for parsing BLAST results and example workflows bu
 
 ## Directory structure
 
+```text
 .
 ├── BLASTParser.py
 │   └── Scripts for parsing and processing BLAST output files
 │
-├── Snakemake_workfow/
+├── Snakemake_workflow/
 │   └── Example Snakemake workflows used in the course
 │
 └── README.md
+```
