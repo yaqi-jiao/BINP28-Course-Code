@@ -14,5 +14,8 @@ It currently contains scripts for parsing BLAST results and example workflows bu
 ├── Snakemake_workflow/
 │   └── Example Snakemake workflows used in the course
 │
+├── Amplicon_sequencing_workflow
+│   └── Reproduction of a published results
+│
 └── README.md
 ```
