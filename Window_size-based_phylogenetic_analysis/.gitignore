@@ -17,3 +17,7 @@
 # keep data directory and its contents
 !data/
 !data/**
+
+# always ignore R history files
+**/.Rhistory
+**/Rhistory
