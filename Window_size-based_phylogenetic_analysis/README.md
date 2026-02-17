@@ -1,4 +1,4 @@
-Window_size-based_phylogenetic_analysis/.gitignore### Window size-based phylogenetic analysis
+### Window size-based phylogenetic analysis
 
 **Overview:** This workflow performed window-based phylogenetic analysis from VCF files and summarizes population-level topological patterns among three predefined populations.
 
