@@ -17,5 +17,8 @@ It currently contains scripts for parsing BLAST results and example workflows bu
 ├── Amplicon_sequencing_workflow
 │   └── Reproduction of a published results
 │
+├── Window_size-based_phylogenetic_analysis
+│   └── Phylogenetic relationships across the genome 
+│
 └── README.md
 ```
